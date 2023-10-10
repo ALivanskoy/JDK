@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc59faa6-055b-4625-aaeb-4f0205e222cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Task1/TicTacToe/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task1/TicTacToe/src/main/java/org/logic/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task1/TicTacToe/src/main/java/org/panels/BasementPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task1/TicTacToe/src/main/java/org/panels/GamePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task1/TicTacToe/src/main/java/org/panels/GameSettingsPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task1/TicTacToe/src/main/java/org/window/MainWindow.java" afterDir="false" />
+    <list default="true" id="a1b2557f-7858-47bc-8690-4ef5c5696a1a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,10 +18,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
-  <component name="ProjectId" id="2WZg4mIHFohXK7gnzm20dvsuShS" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2WZg9EY4tSCZPPFYnzT4t9GTesq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,18 +30,38 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/ashutov/Desktop/ГОСТ/Разработка/JDK/Homework1/Task2"
+    "git-widget-placeholder": "master"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ashutov\IdeaProjects\Chat\src\main\java\ogr" />
+      <recent name="C:\Users\ashutov\IdeaProjects\Chat\src\main\java\org" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Task2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Task2" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dc59faa6-055b-4625-aaeb-4f0205e222cf" name="Changes" comment="" />
-      <created>1696945326734</created>
+      <changelist id="a1b2557f-7858-47bc-8690-4ef5c5696a1a" name="Changes" comment="" />
+      <created>1696945363216</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1696945326734</updated>
+      <updated>1696945363216</updated>
     </task>
     <servers />
   </component>
