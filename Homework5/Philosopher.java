@@ -1,78 +1,63 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class Philosopher implements Runnable{
+public class Philosopher implements Runnable {
 
     private static int philosopherNumber;
-    public static List<Philosopher> philosophers = new CopyOnWriteArrayList<>();
     private String name;
     private int eatCount;
-    private Thread thread;
-
-
+    private final Eatery eatery;
 
 
     {
         this.name = String.format("Philosopher %d", philosopherNumber++);
         this.eatCount = 0;
-        this.thread = new Thread(this,
-                String.format("Thread %s", this.name));
     }
 
+    public Philosopher(Eatery eatery) {
+        this.eatery = eatery;
+    }
 
+    public void dinner() throws InterruptedException {
 
-    public static void dinner (Philosopher philosopher) {
+        synchronized (this.eatery) {
 
-
-            if (philosopher.getEatCount() < 3) {
-                philosopher.eat();
-                try {
-                    philosopher.think();
-                    Thread.sleep(500);
-                    philosopher.getThread().wait();
-                    philosopher.getRandomPhilosopher().notify();
-
-                } catch (Exception e) {
-                    System.out.println(e.getMessage());
-                }
-            } else {
-                philosopher.getThread().interrupt();
-                Philosopher.philosophers.remove(philosopher);
+            if (!eatery.isBusy()) {
+                eatery.occupyEatery(this);
+                eat();
+                eatery.deoccupyEatery();
             }
-
-
+        }
+        Thread.sleep(500);
     }
 
     @Override
     public void run() {
 
-        while (!philosophers.isEmpty()) {
-            Philosopher.dinner(this);
+        while (eatCount < 3) {
+            try {
+                dinner();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            think();
         }
+
     }
 
-    public void eat () {
+    public void eat() {
         System.out.println(String.format("%s eat %d times", this.name, 1 + this.eatCount++));
     }
 
-    public void think () {
+    public void think() {
         System.out.println(String.format("%s now thinking", this.name));
     }
 
-    private Philosopher getRandomPhilosopher () {
-
-        List<Philosopher> list = new ArrayList<>(Philosopher.philosophers);
-        list.remove(this);
-        return list.get(new Random().nextInt(list.size()));
-    }
-
-    public Thread getThread() {
-        return thread;
-    }
-
-    public int getEatCount() {
-        return eatCount;
+    @Override
+    public String toString() {
+        return name;
     }
 }

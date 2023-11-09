@@ -15,16 +15,20 @@ public class App {
     public static void main(String[] args) {
 
         List<Philosopher> philosophers = new ArrayList<>();
-        Philosopher.philosophers = philosophers;
+        List<Thread> threads = new ArrayList<>();
+        Eatery eatery = new Eatery();
 
         for (int i = 0; i < 5; i++) {
-            philosophers.add(new Philosopher());
+            Philosopher philosopher = new Philosopher(eatery);
+            philosophers.add(philosopher);
+            threads.add(new Thread(philosopher,
+                    "Thread "+philosopher));
+
         }
 
-        for (Philosopher philosopher: philosophers) {
-            philosopher.getThread().start();
+        for (Thread thread : threads) {
+            thread.start();
+            System.out.println(thread.getName() + " started");
         }
-
+      }
     }
-
-}
