@@ -14,19 +14,17 @@ public class App {
 
     public static void main(String[] args) {
 
-        List<Philosopher> philosophers = new ArrayList<>();
-        List<Thread> threads = new ArrayList<>();
+
+        List<Thread> philosophersThreads = new ArrayList<>();
         Eatery eatery = new Eatery();
 
         for (int i = 0; i < 5; i++) {
             Philosopher philosopher = new Philosopher(eatery);
-            philosophers.add(philosopher);
-            threads.add(new Thread(philosopher,
+            philosophersThreads.add(new Thread(philosopher,
                     "Thread "+philosopher));
-
         }
 
-        for (Thread thread : threads) {
+        for (Thread thread : philosophersThreads) {
             thread.start();
             System.out.println(thread.getName() + " started");
         }
